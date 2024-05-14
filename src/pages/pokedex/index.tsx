@@ -46,7 +46,7 @@ const Pokedex = () => {
       <PokedexContainer>
         <Title>Pokedex</Title>
         <InputContainer>
-          <Label htmlFor="imageUpload">Carregar Imagem:</Label>
+          <Label htmlFor="imageUpload">Upload image:</Label>
           <Input
             type="file"
             id="imageUpload"
