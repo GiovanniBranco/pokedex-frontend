@@ -16,12 +16,14 @@ const Pokedex = () => {
   const [pokemon, setPokemon] = useState<PokemonData | null>(null);
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPokemon(null);
     if (e.target.files && e.target.files[0]) {
       setImage(e.target.files[0]);
     }
   };
 
   const uploadImage = async () => {
+    setPokemon(null);
     if (image instanceof File) {
       try {
         setLoading(true);
@@ -46,7 +48,7 @@ const Pokedex = () => {
       <PokedexContainer>
         <Title>Pokedex</Title>
         <InputContainer>
-          <Label htmlFor="imageUpload">Upload image:</Label>
+          <Label htmlFor="imageUpload">Upload your image:</Label>
           <Input
             type="file"
             id="imageUpload"
